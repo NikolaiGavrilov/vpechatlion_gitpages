@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import TravelPage from "./components/TravelPage/TravelPage";
 import { useSelector } from "react-redux";
 import UserProfile from "./components/ProfileWindow/ProfileWindow";
@@ -15,7 +15,7 @@ const AppRoutes = () => {
   const users = useSelector((state) => state.users.users);
   const currentUser = users.find((user) => user.userID === userID);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/travel" element={<TravelPage />} />
@@ -27,7 +27,7 @@ const AppRoutes = () => {
           element={<MyProfilePage user={currentUser} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
