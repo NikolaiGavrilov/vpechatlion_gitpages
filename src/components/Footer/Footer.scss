@@ -1,0 +1,27 @@
+@import "../../_variables.scss";
+.footer {
+  height: 100px;
+
+  min-width: 100dvw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $backgroundColorDark;
+  color: $mainTextColor;
+
+  &__contacts {
+    font-size: 25x;
+  }
+
+  &__networks-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}

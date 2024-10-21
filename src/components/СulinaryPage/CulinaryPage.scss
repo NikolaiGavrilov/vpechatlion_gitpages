@@ -1,0 +1,58 @@
+@import "../../_variables.scss";
+@import "../../_mixins.scss";
+.culinary-page {
+  min-height: 100dvh;
+  background: url("img/culinary-bg.jpg") no-repeat;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &__welcome {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    @include page-heading;
+  }
+
+  &__description {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__left {
+    max-height: 500px;
+    border-radius: 150px 250px;
+  }
+
+  &__right {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 32px;
+    padding: 50px;
+    display: block;
+    background-color: $backgroundColorDark;
+    border-radius: 20px;
+    color: $mainTextColor;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .culinary-page {
+    &__heading {
+      @include page-heading-tablet-mobile;
+    }
+
+    &__right {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
